@@ -42,7 +42,7 @@
                                     <span class="help-block small">Your network password</span>
                                 </div>
                                 <button class="btn btn-success btn-block" id="btn_login">Login</button>
-                                <div class="text-center" id="logn_error">
+                                <div class="text-center" id="login_error">
                                     <h4 class="font-bold" id="error_msg"></h4>
                                 </div>    
                             </form>

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 window.onload = function() {  
-    $('#logn_error').hide();
+    $('#login_error').hide();
     var curBrowser = bowser.name;
     var curVersion = Number(bowser.version);
     
@@ -30,7 +30,7 @@ window.onload = function() {
 $(document).ready(function() {      
     $('#btn_login').click(function() { 
         $('#error_msg').html("");
-        $('#logn_error').hide();
+        $('#login_error').hide();
 
         if(loginInfo()) {
             if (location.href.indexOf("ireport.ivc.edu") >= 0) {
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 sessionStorage.setItem('m_parentSite', 'https://services.ivc.edu');
             }
             
-            var login = sessionStorage.getItem('ss_sat_Login');
+            var login = sessionStorage.getItem('ss_ear_Login');
             if (login === "Staff") {
                 window.open('staffHome.html', '_self');
                 return false;
@@ -52,7 +52,7 @@ $(document).ready(function() {
         }
         else {
             $('#error_msg').html("Invalid username or password");
-            $('#logn_error').show();
+            $('#login_error').show();
             return false;
         }
     });
@@ -73,7 +73,7 @@ function loginInfo() {
         var title = objToString(staff_faculty[4]);
         var depart = objToString(staff_faculty[5]);
         var division = objToString(staff_faculty[6]);
-        sessionStorage.setItem('ss_sat_Login', "Staff");
+        sessionStorage.setItem('ss_ear_Login', "Staff");
         sessionData_staff_faculty_login(name, email, etype, phone, title, depart, division);
         return true;
     }
@@ -84,7 +84,7 @@ function loginInfo() {
         var student_id = objToString(student[0]);
         var stu_name = objToString(student[1]);
         var stu_email = objToString(student[2]);
-        sessionStorage.setItem('ss_sat_Login', "Student");
+        sessionStorage.setItem('ss_ear_Login', "Student");
         sessionData_student_login(student_id, stu_name, stu_email);
         return true;
     }
