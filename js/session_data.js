@@ -1,18 +1,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 function sessionData_staff_faculty_login(name, email, etype, phone, title, depart, division) {  
-    sessionStorage.setItem('ss_ear_Name', name);
-    sessionStorage.setItem('ss_ear_Email', email);
-    sessionStorage.setItem('ss_ear_EType', etype);
-    sessionStorage.setItem('ss_ear_Phone', phone);
-    sessionStorage.setItem('ss_ear_Title', title);
-    sessionStorage.setItem('ss_ear_Depart', depart);
-    sessionStorage.setItem('ss_ear_Division', division);
+    sessionStorage.setItem('ss_ear_staff_Name', name);
+    sessionStorage.setItem('ss_ear_staff_Email', email);
+    sessionStorage.setItem('ss_ear_staff_EType', etype);
+    sessionStorage.setItem('ss_ear_staff_Phone', phone);
+    sessionStorage.setItem('ss_ear_staff_Title', title);
+    sessionStorage.setItem('ss_ear_staff_Depart', depart);
+    sessionStorage.setItem('ss_ear_staff_Division', division);
 }
 
 function sessionData_student_login(student_id, stu_name, stu_email) {  
-    sessionStorage.setItem('ss_ear_StudentID', student_id);
-    sessionStorage.setItem('ss_ear_Name', stu_name);
-    sessionStorage.setItem('ss_ear_Email', stu_email);
+    sessionStorage.setItem('ss_ear_stud_StudentID', student_id);
+    sessionStorage.setItem('ss_ear_stud_Name', stu_name);
+    sessionStorage.setItem('ss_ear_stud_Email', stu_email);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
